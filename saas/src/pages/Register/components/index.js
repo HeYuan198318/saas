@@ -158,8 +158,8 @@ export default class Register extends Component {
           <Form ref={node => this.form = node} onSubmit={this.handleSubmit} className="login-form">
             <div className="user-img">
               <img src={logoImg} alt="logo" />
-              <b>LANIF</b>
-              <span>Admin</span>
+              <b>SaaS</b>
+              <span>人才管理系统</span>
             </div>
             <Form.Item name="mail" rules={[
               {

@@ -29,40 +29,32 @@ export default class Dashboard extends BaseComponent {
       <Layout className="full-layout page dashboard-page">
         <Content>
           <Row gutter={20}>
-            <Col md={6}>
+            <Col md={8}>
               <Panel className="qq" header={false} cover>
                 <Icon type="QqOutlined" antd />
                 <h2>
                   <b>523</b>
                 </h2>
-                <h5 className="text-muted">QQ</h5>
+                <h5 className="text-muted">候选人总数</h5>
               </Panel>
             </Col>
-            <Col md={6}>
+            <Col md={8}>
               <Panel className="wechat" header={false} cover>
                 <Icon type="WechatOutlined" antd />
                 <h2>
                   <b>99+</b>
                 </h2>
-                <h5 className="text-muted">微信</h5>
+                <h5 className="text-muted">追踪激活效果</h5>
               </Panel>
             </Col>
-            <Col md={6}>
-              <Panel className="skype" header={false} cover>
-                <Icon type="SkypeOutlined" antd />
-                <h2>
-                  <b>2</b>
-                </h2>
-                <h5 className="text-muted">skype</h5>
-              </Panel>
-            </Col>
-            <Col md={6}>
+          
+            <Col md={8}>
               <Panel className="github" header={false} cover>
                 <Icon type="GithubOutlined" antd />
                 <h2>
                   <b>1k+</b>
                 </h2>
-                <h5 className="text-muted">github</h5>
+                <h5 className="text-muted">新建激活</h5>
               </Panel>
             </Col>
           </Row>

@@ -45,102 +45,73 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
         path: '/dashboard',
       },
       {
-        name: '组件',
+        name: '人才库管理',
         icon: 'DesktopOutlined',
-        path: '/component',
+        path: '/dashboard',
         children: [
           {
-            name: '工具条',
-            path: '/toolbar',
+            name: '人才库概览',
+            path: '/dashboard',
           },
+          
           {
-            name: 'BaseComponent',
-            path: '/baseComponent',
-          },
-          {
-            name: 'Columns',
-            path: '/column',
-          },
-          {
-            name: '搜索条',
-            path: '/searchBar',
-          },
-          {
-            name: '数据表格',
-            path: '/datatable',
-          },
-          {
-            name: '表单',
-            path: '/form',
-          },
-          {
-            name: '穿梭树',
-            path: '/transferTree',
-          },
-          {
-            name: '图表',
+            name: '筛选条件',
             path: '/charts',
             children: [
               {
-                name: 'ECharts',
+                name: '候选人关键词',
                 path: '/charts/ec',
               },
               {
-                name: 'G2',
+                name: '心理测评关键词',
+                path: '/charts/g2',
+              },
+              {
+                name: '应聘类型',
+                path: '/charts/g2',
+              },
+              {
+                name: '学历筛选',
+                path: '/charts/g2',
+              },
+              {
+                name: '招聘方式',
                 path: '/charts/g2',
               },
             ]
           },
-          {
-            name: '打印',
-            path: '/print',
-          },
-          {
-            name: 'Banner 管理',
-            path: '/banner',
-          },
         ],
       },
       {
-        name: 'UI元素',
+        name: '考勤管理',
         icon: 'ShareAltOutlined',
-        path: '/ui',
+        path: '/AttendanceManager',
         children: [
           {
-            name: '按钮',
-            path: '/button',
+            name: '考勤数据',
+            path: '/attendance',
           },
           {
-            name: '图片',
-            path: '/image',
+            name: '工资报表',
+            path: '/salaryStatements',
           },
-          {
-            name: '消息',
-            path: '/alerts',
-          },
-          {
-            name: '动画',
-            path: '/animations',
-          },
-          {
-            name: '图标',
-            path: '/icons',
-          },
-          {
-            name: '富文本',
-            path: '/editor',
-          },
-          {
-            name: '模态窗',
-            path: '/modal',
-          },
-          {
-            name: '遮罩',
-            path: '/mask',
-          },
+         
         ],
       },
+     
       {
+        name: '审批',
+        icon: 'BulbOutlined',
+        path: '/business',
+        children: [
+          {
+            name: '审批管理',
+            path: '/crud/:detail?',
+          }
+        ],
+      },
+
+       {
         name: '页面',
         icon: 'BookOutlined',
         path: '/page',
@@ -189,17 +160,6 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
             name: '多级路由',
             path: '/level-route/:sub?',
           },
-        ],
-      },
-      {
-        name: '通用场景',
-        icon: 'BulbOutlined',
-        path: '/business',
-        children: [
-          {
-            name: 'CRUD',
-            path: '/crud/:detail?',
-          }
         ],
       },
     ], 400)

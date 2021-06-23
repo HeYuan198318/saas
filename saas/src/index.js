@@ -3,7 +3,7 @@ import dva, { dynamic, router } from 'dva';
 import createLoading from 'dva-loading';
 import { createHashHistory } from 'history';
 import request from 'cmn-utils/lib/request';
-import createRoutes from '@/routes';
+import createRoutes from '@/pages';
 import 'assets/styles/index.less';
 import config from './config';
 import { ConfigProvider } from 'antd';

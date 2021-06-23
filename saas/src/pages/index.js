@@ -6,8 +6,11 @@ import NotFound from './Pages/404';
 import Page500 from './Pages/500';
 import Login from './Login';
 import Register from './Register';
-import Blank from './Blank';
+import AttendanceData from './Attendance/AttendanceData';
+import SalaryStatements from './Attendance/SalaryStatements';
 import Dashboard from './Dashboard';
+import CRUD from './Business/CRUD';
+import CRUDDetail from './Business/CRUD/routers/Detail';
 
 /**
  * 主路由配置
@@ -37,8 +40,11 @@ const routesConfig = app => [
     indexRoute: '/dashboard',
     childRoutes: [
     
-      Blank(app),
+      AttendanceData(app),
+      SalaryStatements(app),
       Dashboard(app),
+      CRUD(app),
+      CRUDDetail(app),
       Page403(),
       Page500(),
       NotFound()

@@ -1,8 +1,8 @@
 {
-  "name": "dva-boot-admin",
+  "name": "SaaS-admin",
   "version": "3.0.0",
-  "description": "dva-boot-admin",
-  "homepage": "/dva-boot-admin",
+  "description": "SaaS-admin",
+  "homepage": "/SaaS-admin",
   "repository": {
     "type": "git",
     "url": "git@github.com:LANIF-UI/dva-boot-admin.git"
