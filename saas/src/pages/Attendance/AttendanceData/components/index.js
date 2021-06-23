@@ -72,12 +72,13 @@ export default class Dashboard extends BaseComponent {
 
           <Row>
             <Col>
-              <Panel title="年度出勤率" height={400}>
+              <Panel title="年度出勤率" height={350}>
                 <div className="flex">
                   <div className="flex-auto-hidden flex flex-column">
-                    <h4 className="flex-none">销售额分布</h4>
+                    <h4 className="flex-none">年度出勤率分布</h4>
                     <div className="flex-auto-hidden">
-                      <Bar2 data={bar2} />
+                      <Line1 />
+                      {/* <Bar2 data={bar2} /> */}
                     </div>
                   </div>
                   <div className="flex-none sales-order">

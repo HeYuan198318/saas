@@ -5,7 +5,7 @@ import Button from 'components/Button';
 
 export default (self,employees) => [
   {
-    title: '单位名称',
+    title: '员工部门',
     name: 'deptName',
     tableItem: {},
     searchItem: {
@@ -14,7 +14,7 @@ export default (self,employees) => [
     formItem: {}
   },
   {
-    title: '配电网络',
+    title: '姓名',
     name: 'distributionNetwork',
     dict: [{ code: '0', codeName: '城市' }, { code: '1', codeName: '乡村' }],
     tableItem: {},
@@ -26,21 +26,21 @@ export default (self,employees) => [
     }
   },
   {
-    title: '作业地点',
+    title: '应出勤天数',
     name: 'address',
     tableItem: {},
     formItem: {},
     searchItem: {}
   },
   {
-    title: '作业类型',
+    title: '实出勤天数',
     name: 'type',
     tableItem: {},
     formItem: {},
     searchItem: {}
   },
   {
-    title: '开工时间',
+    title: '基本工资',
     name: 'planBeginTime',
     tableItem: {},
     formItem: {
@@ -51,7 +51,7 @@ export default (self,employees) => [
     }
   },
   {
-    title: '竣工时间',
+    title: '岗位工资',
     name: 'planEndTime',
     tableItem: {},
     formItem: {
@@ -62,7 +62,7 @@ export default (self,employees) => [
     }
   },
   {
-    title: '到岗人员',
+    title: '绩效功效',
     name: 'workEmployee',
     tableItem: {
       render: text => text.map(item => item.title).join(',')
@@ -74,12 +74,39 @@ export default (self,employees) => [
       normalize: value => value.map(item => item.key)
     }
   },
+
   {
-    title: '作业内容',
+    title: '违规扣款',
     name: 'content',
+    tableItem: {},
     formItem: {
       type: 'editor'
     }
+  },
+  {
+    title: '社保扣款',
+    name: 'datetime',
+    tableItem: {},
+  },
+  {
+    title: '全勤奖',
+    name: 'datetime',
+    tableItem: {},
+  },
+  {
+    title: '加班天数',
+    name: 'datetime',
+    tableItem: {},
+  },
+  {
+    title: '加班费',
+    name: 'datetime',
+    tableItem: {},
+  },
+  {
+    title: '实发工资',
+    name: 'datetime',
+    tableItem: {},
   },
   {
     title: '操作',
