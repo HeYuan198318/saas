@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Layout, Col, Row } from 'antd';
+import { Layout, Col, Row ,Button,Radio,DatePicker } from 'antd';
 import Icon from 'components/Icon';
 import BaseComponent from 'components/BaseComponent';
 import Panel from 'components/Panel';
@@ -13,8 +13,8 @@ const { Chart, Axis, Geom, Tooltip, Legend, Coord, Label } = G2;
 const rankingListData = [];
 for (let i = 0; i < 7; i += 1) {
   rankingListData.push({
-    title: `工专路 ${i} 号店`,
-    total: 323234
+    title: `张 ${i} `,
+    total: 1
   });
 }
 
@@ -50,7 +50,7 @@ export default class Dashboard extends BaseComponent {
             </Col>
             <Col md={6}>
               <Panel className="wechat" header={false} cover height={150}>
-                <Icon type="WechatOutlined" antd />
+                <Icon type="SkypeOutlined" antd />
                 <h2>
                   <b>99+</b>
                 </h2>
@@ -76,13 +76,22 @@ export default class Dashboard extends BaseComponent {
                 <div className="flex">
                   <div className="flex-auto-hidden flex flex-column">
                     <h4 className="flex-none">年度出勤率分布</h4>
+                    <div style={{textAlign:'right'}}>
+                    <Radio.Group defaultValue="a" buttonStyle="solid" size="small" style={{ marginTop: 16 }}>
+                        <Radio.Button value="a">去年</Radio.Button>
+                        <Radio.Button value="b">今年</Radio.Button>
+                        <Radio.Button value="c">最近七日</Radio.Button>
+                    </Radio.Group>
+                    
+                      <DatePicker size='small'/>
+                    </div>
                     <div className="flex-auto-hidden">
-                      <Line1 />
-                      {/* <Bar2 data={bar2} /> */}
+                      <Bar2 data={bar2} />
                     </div>
                   </div>
                   <div className="flex-none sales-order">
-                    <h4>门店销售额排名</h4>
+                  
+                    <h4>年度出勤率排名</h4>
                     <ul>
                       {rankingListData.map((item, i) => (
                         <li key={item.title}>
@@ -145,7 +154,7 @@ const Bar2 = props => {
   const dv = ds.createView().source(props.data);
   dv.transform({
     type: 'fold',
-    fields: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May.', 'Jun.', 'Jul.', 'Aug.'], // 展开字段集
+    fields: ['一月.', '二月.', '三月.', '四月.', '五月.', '六月.', '七月.', '八月.','九月.','十月.','十一月.','十二月.'], // 展开字段集
     key: '月份', // key字段
     value: '月均降雨量' // value字段
   });

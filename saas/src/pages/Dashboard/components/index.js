@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Layout, Col, Row } from 'antd';
+import { Layout, Col, Row,Tag, Divider} from 'antd';
 import Icon from 'components/Icon';
 import BaseComponent from 'components/BaseComponent';
 import Panel from 'components/Panel';
 import G2 from 'components/Charts/G2';
 import DataSet from '@antv/data-set';
 import './index.less';
+import Peopleinfo from './peopleInfo/index';
 const { Content } = Layout;
 const { Chart, Axis, Geom, Tooltip, Legend, Coord, Label } = G2;
 
@@ -28,9 +29,10 @@ export default class Dashboard extends BaseComponent {
     return (
       <Layout className="full-layout page dashboard-page">
         <Content>
+        <Panel title="人才库概览" height={200}>
           <Row gutter={20}>
             <Col md={8}>
-              <Panel className="qq" header={false} cover>
+              <Panel className="qq" header={false} cover height={150}>
                 <Icon type="QqOutlined" antd />
                 <h2>
                   <b>523</b>
@@ -39,7 +41,7 @@ export default class Dashboard extends BaseComponent {
               </Panel>
             </Col>
             <Col md={8}>
-              <Panel className="wechat" header={false} cover>
+              <Panel className="wechat" header={false} cover height={150}>
                 <Icon type="WechatOutlined" antd />
                 <h2>
                   <b>99+</b>
@@ -49,7 +51,7 @@ export default class Dashboard extends BaseComponent {
             </Col>
           
             <Col md={8}>
-              <Panel className="github" header={false} cover>
+              <Panel className="github" header={false} cover height={150}>
                 <Icon type="GithubOutlined" antd />
                 <h2>
                   <b>1k+</b>
@@ -58,49 +60,23 @@ export default class Dashboard extends BaseComponent {
               </Panel>
             </Col>
           </Row>
+          </Panel>
           <Row>
             <Col>
-              <Panel title="数据面板组件" height={300}>
-                <div className="flex">
-                  <div className="flex-auto-hidden flex flex-column">
-                    <h4 className="flex-none">销售额分布</h4>
-                    <div className="flex-auto-hidden">
-                      <Bar2 data={bar2} />
-                    </div>
-                  </div>
-                  <div className="flex-none sales-order">
-                    <h4>门店销售额排名</h4>
-                    <ul>
-                      {rankingListData.map((item, i) => (
-                        <li key={item.title}>
-                          <span>{i + 1}</span>
-                          <span>{item.title}</span>
-                          <span>{item.total}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+              <Panel title="基本资料" height={450}>
+              <Row>
+                  <Col span={14}>基本資料</Col>
+                  <Col span={5}><span>申請時間</span></Col>
+                  <Col span={5}><span>歸檔時間</span></Col>
+                </Row>
+                <hr></hr>
+                <Peopleinfo/>
+                <Peopleinfo/>
+                <Peopleinfo/>
               </Panel>
             </Col>
           </Row>
-          <Row gutter={20}>
-            <Col md={8}>
-              <Panel title="折线图" height={260}>
-                <Line1 />
-              </Panel>
-            </Col>
-            <Col md={8}>
-              <Panel title="饼图" height={260}>
-                <Pie1 />
-              </Panel>
-            </Col>
-            <Col md={8}>
-              <Panel title="柱状图" height={260}>
-                <Bar1 data={bar1} />
-              </Panel>
-            </Col>
-          </Row>
+         
         </Content>
       </Layout>
     );

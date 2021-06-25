@@ -45,7 +45,7 @@ export default modelEnhance({
         type: '@request',
         payload: {
           valueField: 'pageData',
-          url: '/crud/getList',
+          url: '/salaryStatements/getList',
           pageInfo: pageData
         }
       });
@@ -58,7 +58,7 @@ export default modelEnhance({
         type: '@request',
         payload: {
           notice: true,
-          url: '<%=api_1 %>',
+          url: '/salaryStatements/save',
           data: values
         }
       });
@@ -78,7 +78,7 @@ export default modelEnhance({
         type: '@request',
         payload: {
           notice: true,
-          url: '<%=api_2 %>',
+          url: '/salaryStatements/bathDelete',
           data: records.map(item => item.id)
         }
       });

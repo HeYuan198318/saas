@@ -56,27 +56,27 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
           
           {
             name: '筛选条件',
-            path: '/charts',
+            path: '/dashboard',
             children: [
               {
                 name: '候选人关键词',
-                path: '/charts/ec',
+                path: '/dashboard/ec',
               },
               {
                 name: '心理测评关键词',
-                path: '/charts/g2',
+                path: '/dashboard/g2',
               },
               {
                 name: '应聘类型',
-                path: '/charts/g2',
+                path: '/dashboard/g3',
               },
               {
                 name: '学历筛选',
-                path: '/charts/g2',
+                path: '/dashboard/g4',
               },
               {
                 name: '招聘方式',
-                path: '/charts/g2',
+                path: '/dashboard/g5',
               },
             ]
           },
@@ -111,57 +111,57 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
         ],
       },
 
-       {
-        name: '页面',
-        icon: 'BookOutlined',
-        path: '/page',
-        children: [
-          {
-            name: '登录页',
-            path: '/sign/login',
-          },
-          {
-            name: '注册页',
-            path: '/sign/register',
-          },
-          {
-            name: '锁屏',
-            path: '/lock',
-          },
-          {
-            name: '画廊',
-            path: '/gallery',
-          },
-          {
-            name: '空白页',
-            path: '/blank',
-          },
-          {
-            name: '结果页',
-            path: '/result',
-          },
-          {
-            name: 'Coming Soon',
-            path: '/coming',
-          },
-          {
-            name: '403',
-            path: '/403',
-          },
-          {
-            name: '404',
-            path: '/404',
-          },
-          {
-            name: '500',
-            path: '/500',
-          },
-          {
-            name: '多级路由',
-            path: '/level-route/:sub?',
-          },
-        ],
-      },
+      //  {
+      //   name: '页面',
+      //   icon: 'BookOutlined',
+      //   path: '/page',
+      //   children: [
+      //     {
+      //       name: '登录页',
+      //       path: '/sign/login',
+      //     },
+      //     {
+      //       name: '注册页',
+      //       path: '/sign/register',
+      //     },
+      //     {
+      //       name: '锁屏',
+      //       path: '/lock',
+      //     },
+      //     {
+      //       name: '画廊',
+      //       path: '/gallery',
+      //     },
+      //     {
+      //       name: '空白页',
+      //       path: '/blank',
+      //     },
+      //     {
+      //       name: '结果页',
+      //       path: '/result',
+      //     },
+      //     {
+      //       name: 'Coming Soon',
+      //       path: '/coming',
+      //     },
+      //     {
+      //       name: '403',
+      //       path: '/403',
+      //     },
+      //     {
+      //       name: '404',
+      //       path: '/404',
+      //     },
+      //     {
+      //       name: '500',
+      //       path: '/500',
+      //     },
+      //     {
+      //       name: '多级路由',
+      //       path: '/level-route/:sub?',
+      //     },
+      //   ],
+      // },
     ], 400)
   } 
 }

@@ -2,12 +2,14 @@ import React from 'react';
 import { connect } from 'dva';
 import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import { Layout, Button } from 'antd';
+import { PrinterOutlined } from '@ant-design/icons';
 import BaseComponent from 'components/BaseComponent';
 import Toolbar from 'components/Toolbar';
 import SearchBar from 'components/SearchBar';
 import DataTable from 'components/DataTable';
 import { ModalForm } from 'components/Modal';
 import createColumns from './columns';
+import Print from 'components/Print'
 import './index.less';
 const { Content, Header, Footer } = Layout;
 const Pagination = DataTable.Pagination;
@@ -86,7 +88,7 @@ export default class extends BaseComponent {
       visible,
       columns,
       modalOpts: {
-        width: 700
+        width: 600
       },
       onCancel: () => {
         this.setState({
@@ -111,7 +113,41 @@ export default class extends BaseComponent {
         });
       }
     };
+    const comps = (
+      <div>
+        <table border="1" style={{width: '100%'}}>
+          <thead>
+            <tr>
+              <th style={{textAlign: 'center', color: 'aqua'}}>员工部门</th>
+              <th style={{textAlign: 'center', color: 'aqua'}}>员工姓名</th>
+              <th style={{textAlign: 'center', color: 'aqua'}}>应该出勤天数</th>
+              <th style={{textAlign: 'center', color: 'aqua'}}>实际出勤天数</th>
+              <th style={{textAlign: 'center', color: 'aqua'}}>岗位薪资</th>
+              <th style={{textAlign: 'center', color: 'aqua'}}>实际薪资</th>
 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{textAlign: 'center'}}>技术部</td>
+              <td style={{textAlign: 'center'}}>张三</td>
+              <td style={{textAlign: 'center'}}>21</td>
+              <td style={{textAlign: 'center'}}>20</td>
+              <td style={{textAlign: 'center'}}>3000</td>
+              <td style={{textAlign: 'center'}}>2700</td>
+            </tr>
+            <tr>
+              <td style={{textAlign: 'center'}}>研发部</td>
+              <td style={{textAlign: 'center'}}>李四</td>
+              <td style={{textAlign: 'center'}}>21</td>
+              <td style={{textAlign: 'center'}}>21</td>
+              <td style={{textAlign: 'center'}}>3000</td>
+              <td style={{textAlign: 'center'}}>3000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
     return (
       <Layout className="full-layout salaryStatements-page">
         <Header>
@@ -128,6 +164,9 @@ export default class extends BaseComponent {
                 >
                   删除
                 </Button>
+                <Print trigger={<Button icon={<PrinterOutlined />}>打印</Button>}
+                  content={ comps}
+                ></Print>
               </Button.Group>
             }
             pullDown={<SearchBar type="grid" {...searchBarProps} />}
@@ -135,9 +174,11 @@ export default class extends BaseComponent {
             <SearchBar group="abc" {...searchBarProps} />
           </Toolbar>
         </Header>
+
         <Content>
           <DataTable {...dataTableProps} />
         </Content>
+
         <Footer>
           <Pagination {...dataTableProps} />
         </Footer>

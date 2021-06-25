@@ -8,105 +8,98 @@ export default (self,employees) => [
     title: '员工部门',
     name: 'deptName',
     tableItem: {},
+    dict: [{ code: '0', codeName: '研发部' }, { code: '1', codeName: '技术部' }],
     searchItem: {
-      group: 'abc'
-    },
-    formItem: {}
-  },
-  {
-    title: '姓名',
-    name: 'distributionNetwork',
-    dict: [{ code: '0', codeName: '城市' }, { code: '1', codeName: '乡村' }],
-    tableItem: {},
-    formItem: {
+      group: 'abc',
       type: 'select'
     },
-    searchItem: {
+    formItem: {
       type: 'select'
     }
   },
   {
-    title: '应出勤天数',
-    name: 'address',
+    title: '姓名',
+    name: 'jobName',
     tableItem: {},
-    formItem: {},
+    formItem: { },
+    searchItem: {}
+  },
+  {
+    title: '应出勤天数',
+    name: 'shouldDay',
+    tableItem: {},
+    formItem: {type: 'number'},
     searchItem: {}
   },
   {
     title: '实出勤天数',
-    name: 'type',
+    name: 'actualDay',
     tableItem: {},
-    formItem: {},
+    formItem: {type: 'number'},
     searchItem: {}
   },
   {
     title: '基本工资',
-    name: 'planBeginTime',
+    name: 'basicSalary',
     tableItem: {},
     formItem: {
-      type: 'datetime'
+      type: 'number'
     },
-    searchItem: {
-      type: 'datetime'
-    }
+
   },
   {
     title: '岗位工资',
-    name: 'planEndTime',
+    name: 'jobsSalary',
     tableItem: {},
     formItem: {
-      type: 'datetime'
+      type: 'number'
     },
-    searchItem: {
-      type: 'datetime'
-    }
+   
   },
   {
     title: '绩效功效',
-    name: 'workEmployee',
-    tableItem: {
-      render: text => text.map(item => item.title).join(',')
-    },
-    formItem: {
-      type: 'transfer',
-      modal: true,
-      dataSource: employees,
-      normalize: value => value.map(item => item.key)
-    }
+    name: 'performance',
+    tableItem: { },
+    formItem: {type:'number' }
   },
 
   {
     title: '违规扣款',
-    name: 'content',
+    name: 'deductions',
     tableItem: {},
-    formItem: {
-      type: 'editor'
-    }
+    formItem: {type: 'number'}
   },
   {
     title: '社保扣款',
-    name: 'datetime',
-    tableItem: {},
+    name: 'socialSecurity',
+    tableItem: {
+      type: 'number'
+    },
+    formItem: {type: 'number'}
   },
   {
     title: '全勤奖',
-    name: 'datetime',
-    tableItem: {},
+    name: 'fullTime',
+    tableItem: { type: 'number'},
+    formItem: {type: 'number'}
   },
   {
     title: '加班天数',
-    name: 'datetime',
-    tableItem: {},
+    name: 'addDay',
+    tableItem: { type: 'number'},
+    formItem: {type: 'number'}
   },
   {
     title: '加班费',
-    name: 'datetime',
-    tableItem: {},
+    name: 'addPay',
+    tableItem: { type: 'number'},
+    formItem: {type: 'number'}
   },
   {
-    title: '实发工资',
-    name: 'datetime',
-    tableItem: {},
+    title: '实发薪资',
+    name: 'realSalary',
+    tableItem: { type: 'number'},
+    formItem: {type: 'number'}
   },
   {
     title: '操作',
