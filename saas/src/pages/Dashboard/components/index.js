@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Layout, Col, Row,Tag, Divider} from 'antd';
+import { Layout, Col, Row,Tag, Divider,Input,Space } from 'antd';
 import Icon from 'components/Icon';
 import BaseComponent from 'components/BaseComponent';
 import Panel from 'components/Panel';
@@ -10,6 +10,7 @@ import './index.less';
 import Peopleinfo from './peopleInfo/index';
 const { Content } = Layout;
 const { Chart, Axis, Geom, Tooltip, Legend, Coord, Label } = G2;
+const { Search } = Input;
 
 const rankingListData = [];
 for (let i = 0; i < 7; i += 1) {
@@ -65,7 +66,9 @@ export default class Dashboard extends BaseComponent {
             <Col>
               <Panel title="基本资料" height={450}>
               <Row>
-                  <Col span={14}>基本資料</Col>
+                  <Col span={14}>基本資料
+                    <span>   <Search placeholder="候选人关键词" style={{ width: 200 }} /></span>  
+                  </Col>
                   <Col span={5}><span>申請時間</span></Col>
                   <Col span={5}><span>歸檔時間</span></Col>
                 </Row>
