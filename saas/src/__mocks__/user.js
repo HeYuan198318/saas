@@ -55,31 +55,29 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
           },
           
           {
-            name: '筛选条件',
-            path: '/dashboard',
-            children: [
-              {
-                name: '候选人关键词',
-                path: '/dashboard/ec',
-              },
-              {
-                name: '心理测评关键词',
-                path: '/dashboard/g2',
-              },
-              {
-                name: '应聘类型',
-                path: '/dashboard/g3',
-              },
-              {
-                name: '学历筛选',
-                path: '/dashboard/g4',
-              },
-              {
-                name: '招聘方式',
-                path: '/dashboard/g5',
-              },
-            ]
+            name: '简历标签',
+            path: '/dashboard/ResumeLable',        
           },
+          {
+            name: '人才列表',
+            path: '/dashboard/PersonnelList',        
+          },
+        ],
+      },
+      {
+        name: '招聘',
+        icon: 'TeamOutlined',
+        path: '/recruitment',
+        children: [
+          {
+            name: '简历集合',
+            path: '/recruitment/a',
+          },
+          {
+            name: '面试履历',
+            path: '/recruitment/b',
+          },
+         
         ],
       },
       {
@@ -92,6 +90,22 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
             path: '/attendance',
           },
           {
+            name: '审批',
+            path: '/crud/:detail?',
+          },
+          {
+            name: '任务',
+            path: '/AttendanceManager',
+          },
+          {
+            name: '公共学习平台',
+            path: '/AttendanceManager',
+          },
+          {
+            name: '离职',
+            path: '/AttendanceManager',
+          },
+          {
             name: '工资报表',
             path: '/salaryStatements',
           },
@@ -100,13 +114,21 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
       },
      
       {
-        name: '审批',
+        name: '个人档案',
         icon: 'BulbOutlined',
         path: '/business',
         children: [
           {
-            name: '审批管理',
+            name: '动态人才档案',
             path: '/crud/:detail?',
+          },
+          {
+            name: '测评',
+            path: '/crud',
+          },
+          {
+            name: '情景化评估',
+            path: '/crud',
           }
         ],
       },

@@ -8,6 +8,7 @@ import G2 from 'components/Charts/G2';
 import DataSet from '@antv/data-set';
 import './index.less';
 import Peopleinfo from './peopleInfo/index';
+import BaiduMap from './BaiduMap/index';
 const { Content } = Layout;
 const { Chart, Axis, Geom, Tooltip, Legend, Coord, Label } = G2;
 const { Search } = Input;
@@ -30,10 +31,9 @@ export default class Dashboard extends BaseComponent {
     return (
       <Layout className="full-layout page dashboard-page">
         <Content>
-        <Panel title="人才库概览" height={200}>
           <Row gutter={20}>
             <Col md={8}>
-              <Panel className="qq" header={false} cover height={150}>
+              <Panel className="qq" header={false} cover >
                 <Icon type="QqOutlined" antd />
                 <h2>
                   <b>523</b>
@@ -42,7 +42,7 @@ export default class Dashboard extends BaseComponent {
               </Panel>
             </Col>
             <Col md={8}>
-              <Panel className="wechat" header={false} cover height={150}>
+              <Panel className="wechat" header={false} cover >
                 <Icon type="WechatOutlined" antd />
                 <h2>
                   <b>99+</b>
@@ -50,9 +50,8 @@ export default class Dashboard extends BaseComponent {
                 <h5 className="text-muted">追踪激活效果</h5>
               </Panel>
             </Col>
-          
             <Col md={8}>
-              <Panel className="github" header={false} cover height={150}>
+              <Panel className="github" header={false} cover >
                 <Icon type="GithubOutlined" antd />
                 <h2>
                   <b>1k+</b>
@@ -61,10 +60,11 @@ export default class Dashboard extends BaseComponent {
               </Panel>
             </Col>
           </Row>
-          </Panel>
+
           <Row>
             <Col>
-              <Panel title="基本资料" height={450}>
+              <Panel title="基本资料" height={280}>
+             
               <Row>
                   <Col span={14}>基本資料
                     <span>   <Search placeholder="候选人关键词" style={{ width: 200 }} /></span>  
@@ -73,13 +73,37 @@ export default class Dashboard extends BaseComponent {
                   <Col span={5}><span>歸檔時間</span></Col>
                 </Row>
                 <hr></hr>
-                <Peopleinfo/>
-                <Peopleinfo/>
-                <Peopleinfo/>
+                <div style={{height:'100%',width:'100%',overflow: 'scroll'}}>
+                  <Peopleinfo/>
+                  <Peopleinfo/>
+                  <Peopleinfo/>
+                </div>
+               
               </Panel>
             </Col>
           </Row>
-         
+          <Row gutter={20}>
+            <Col md={6}>
+              <Panel title="折线图" height={260}>
+                <Line1 />
+              </Panel>
+            </Col>
+            <Col md={6}>
+              <Panel title="饼图" height={260}>
+                <Pie1 />
+              </Panel>
+            </Col>
+            <Col md={6}>
+              <Panel title="人才分布地图" height={260}>
+                <BaiduMap/>
+              </Panel>
+            </Col>
+            <Col md={6}>
+              <Panel title="柱状图" height={260}>
+                <Bar1 data={bar1} />          
+              </Panel>
+            </Col>
+          </Row>
         </Content>
       </Layout>
     );

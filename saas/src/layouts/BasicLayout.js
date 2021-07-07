@@ -239,6 +239,7 @@ export default class BasicLayout extends React.PureComponent {
             menu={menu}
             user={user}
             isMobile={isMobile}
+            
           />
           <Content>
             {theme.layout.indexOf('tabLayout') >= 0 ? (

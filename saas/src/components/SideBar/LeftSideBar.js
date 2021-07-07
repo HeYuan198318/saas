@@ -170,7 +170,8 @@ class LeftSideBar extends PureComponent {
     const moreThanOne =
       openKeys.filter(openKey => this.isMainMenu(openKey)).length > 1;
     this.setState({
-      openKeys: moreThanOne ? [lastOpenKey] : [...openKeys]
+      // openKeys: moreThanOne ? [lastOpenKey] : [...openKeys]
+      openKeys:  [...openKeys]
     });
   };
 
@@ -254,8 +255,9 @@ class LeftSideBar extends PureComponent {
             </div>
           </header>
           <Menu
-            onClick={this.handleClick}
+           // onClick={this.handleClick}
             onOpenChange={this.handleOpenChange}
+            inlineCollapsed={false}
             mode="inline"
             theme={theme}
             {...menuProps}
