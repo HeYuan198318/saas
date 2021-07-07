@@ -60,13 +60,49 @@ export default class Dashboard extends BaseComponent {
               </Panel>
             </Col>
           </Row>
-
+          <Row >
+            <Col>
+              <Panel title="简历标签" height={180}>                       
+                  <div style={{marginBottom:'15px'}} >              
+                    系统标签:&nbsp;&nbsp;&nbsp;
+                    <Tag color="success" closable>专升本</Tag>
+                      <Tag color="processing" closable>BAT</Tag>              
+                      <Tag color="default" closable>default</Tag>                  
+                  </div> 
+                  <div style={{marginBottom:'15px'}} > 
+                    教育背景:&nbsp;&nbsp;&nbsp;
+                    <Tag color="volcano" closable>天津理工大学</Tag>
+                    <Tag color="orange" closable>电子科技大学</Tag>
+                  </div> 
+                  <div style={{marginBottom:'15px'}} >                     
+                    工作经历:&nbsp;&nbsp;&nbsp;                
+                    <Tag color="gold" closable>百度</Tag>
+                    <Tag color="lime" closable>华为</Tag>
+                    <Tag color="green" closable>光大银行</Tag>
+                    <Tag color="cyan" closable>阿里巴巴有限公司</Tag>           
+                  </div> 
+                  <div style={{marginBottom:'15px'}} >                     
+                    关键技能:&nbsp;&nbsp;&nbsp;
+                    <Tag color="magenta" closable>数据分析</Tag>
+                    <Tag color="volcano" closable>消费类型</Tag>
+                    <Tag color="orange" closable>优化用户设置和转化方案</Tag>
+                    <Tag color="lime" closable>项目管理</Tag>
+                    <Tag color="green" closable>计算机科学与技术</Tag>
+                    <Tag color="cyan" closable>数据中台</Tag>
+                    <Tag color="blue" closable>潜力产品分析</Tag> 
+                    <Tag color="geekblue" closable>资源整合</Tag>
+                    <Tag color="purple" closable>软件工程</Tag>                 
+                  </div> 
+    
+              </Panel>
+            </Col>
+          </Row>
+          
           <Row>
             <Col>
-              <Panel title="基本资料" height={280}>
-             
+              <Panel title="人才列表" height={280}>
               <Row>
-                  <Col span={14}>基本資料
+                  <Col span={14}>人才列表
                     <span>   <Search placeholder="候选人关键词" style={{ width: 200 }} /></span>  
                   </Col>
                   <Col span={5}><span>申請時間</span></Col>
@@ -77,8 +113,10 @@ export default class Dashboard extends BaseComponent {
                   <Peopleinfo/>
                   <Peopleinfo/>
                   <Peopleinfo/>
+                  <Peopleinfo/>
+                  <Peopleinfo/>
+                  <Peopleinfo/>
                 </div>
-               
               </Panel>
             </Col>
           </Row>
