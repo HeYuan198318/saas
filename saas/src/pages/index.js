@@ -11,6 +11,7 @@ import SalaryStatements from './Attendance/SalaryStatements';
 import Dashboard from './Dashboard';
 import CRUD from './Business/CRUD';
 import CRUDDetail from './Business/CRUD/routers/Detail';
+import Archives from './Personal/Archives/index';
 
 /**
  * 主路由配置
@@ -45,6 +46,7 @@ const routesConfig = app => [
       Dashboard(app),
       CRUD(app),
       CRUDDetail(app),
+      Archives(app),
       Page403(),
       Page500(),
       NotFound()

@@ -116,11 +116,11 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
       {
         name: '个人档案',
         icon: 'BulbOutlined',
-        path: '/business',
+        path: '/personal',
         children: [
           {
             name: '动态人才档案',
-            path: '/crud/:detail?',
+            path: '/personal/Archives',
           },
           {
             name: '测评',
