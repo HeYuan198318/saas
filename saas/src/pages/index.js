@@ -12,6 +12,7 @@ import Dashboard from './Dashboard';
 import CRUD from './Business/CRUD';
 import CRUDDetail from './Business/CRUD/routers/Detail';
 import Archives from './Personal/Archives/index';
+import Calendar from './Recruitment/Calendar/index';
 
 /**
  * 主路由配置
@@ -47,6 +48,7 @@ const routesConfig = app => [
       CRUD(app),
       CRUDDetail(app),
       Archives(app),
+      Calendar(app),
       Page403(),
       Page500(),
       NotFound()

@@ -67,15 +67,15 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
       {
         name: '招聘',
         icon: 'TeamOutlined',
-        path: '/recruitment',
+        path: '/Recruitment',
         children: [
           {
             name: '简历集合',
-            path: '/recruitment/a',
+            path: '/Recruitment/a',
           },
           {
             name: '面试履历',
-            path: '/recruitment/b',
+            path: '/Recruitment/Calender',
           },
          
         ],
