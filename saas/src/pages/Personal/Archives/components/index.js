@@ -110,7 +110,7 @@ export default class Archives extends BaseComponent {
             
             <div style={{width:'80%'}}>
               <div style={{height:'65%'}}>
-                  <div style={{height:'40%',justifyContent:'space-around',display:'flex',}}>
+                  <div style={{height:'30%',justifyContent:'space-around',display:'flex',}}>
                    <Panel header={false} cover  width="48%">
                    <h2><SolutionOutlined />基本信息</h2> 
                     <div style={{width:'70%',margin:'0 auto'}}>
@@ -146,13 +146,12 @@ export default class Archives extends BaseComponent {
                       </Steps>
                     </Panel>
                   </div>
-                  <div style={{height:'60%',display:'flex',justifyContent:'space-around',marginTop:'10px'}}>
-                    
-                    <Panel header={false} cover width='48%'>
+                  <div style={{height:'70%',display:'flex',justifyContent:'space-around'}}>
+                    <Panel title="多维度分析" width='48%'>
                       <Radar/>
                     </Panel>
                     
-                    <Panel header={false} cover width='48%'>
+                    <Panel title="竞争力排名" width='48%'>
                       <Bar/>
                     </Panel>
                     

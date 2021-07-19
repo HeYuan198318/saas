@@ -4,6 +4,7 @@ import UserLayout from '@/layouts/UserLayout';
 import Page403 from './Pages/403';
 import NotFound from './Pages/404';
 import Page500 from './Pages/500';
+import Coming from './Personal/Coming';
 import Login from './Login';
 import Register from './Register';
 import AttendanceData from './Attendance/AttendanceData';
@@ -13,6 +14,7 @@ import CRUD from './Business/CRUD';
 import CRUDDetail from './Business/CRUD/routers/Detail';
 import Archives from './Personal/Archives/index';
 import Calendar from './Recruitment/Calendar/index';
+import StudyPlatform from './Attendance/StudyPlatform/index';
 
 /**
  * 主路由配置
@@ -49,6 +51,8 @@ const routesConfig = app => [
       CRUDDetail(app),
       Archives(app),
       Calendar(app),
+      StudyPlatform(app),
+      Coming(),
       Page403(),
       Page500(),
       NotFound()

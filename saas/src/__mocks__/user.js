@@ -71,7 +71,7 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
         children: [
           {
             name: '简历集合',
-            path: '/Recruitment/a',
+            path: '/coming',
           },
           {
             name: '面试履历',
@@ -99,7 +99,7 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
           },
           {
             name: '公共学习平台',
-            path: '/AttendanceManager',
+            path: '/studyPlatform',
           },
           {
             name: '离职',
@@ -128,7 +128,7 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
           },
           {
             name: '情景化评估',
-            path: '/crud',
+            path: '/coming',
           }
         ],
       },
